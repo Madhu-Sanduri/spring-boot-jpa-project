@@ -18,30 +18,58 @@ public class productDetails {
 	
 	@Column(name="pPrice")
 	private double productPrice;
+	
+	@Column(name="customerId")
+	private int ordered;
 
 	public int getProductId() {
 		return productId;
 	}
+	
+	
 
-	public void setProductId(int productId) {
+	public productDetails() {
+			super();
+		}
+	
+	
+
+
+
+
+public productDetails(int productId, String productName, double productPrice, int ordered) {
+		super();
 		this.productId = productId;
+		this.productName = productName;
+		this.productPrice = productPrice;
+		this.ordered = ordered;
 	}
+
+
+
+//	public void setProductId(int productId) {
+//		this.productId = productId;
+//	}
 
 	public String getProductName() {
 		return productName;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
+//	public void setProductName(String productName) {
+//		this.productName = productName;
+//	}
 
 	public double getProductPrice() {
 		return productPrice;
 	}
-
-	public void setProductPrice(double productPrice) {
-		this.productPrice = productPrice;
+	
+	public int getOrdered() {
+		return ordered;
 	}
+
+//	public void setProductPrice(double productPrice) {
+//		this.productPrice = productPrice;
+//	}
 	
 	
 
